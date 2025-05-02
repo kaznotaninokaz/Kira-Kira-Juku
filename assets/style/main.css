@@ -244,13 +244,11 @@ html{
 
 /* カバー
 -----------------------------------------------------*/
-.cover{
-  position: relative;
-}
 .cover-container{
   position: relative;
   top: 4.375rem;
   right: .875rem;
+
 }
 @media(min-width:768px){
   .cover-container{
@@ -264,7 +262,7 @@ html{
 /* 合格実績 No,1 */
 .cover-top{
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 8%;
   display: flex;
 }
@@ -321,11 +319,11 @@ html{
 /* 申込開始案内 */
 .cover-bottom{
   position: absolute;
-  bottom: 14%;
+  bottom: 51.5%;
   left: 8%;
 }
 .cover-bottom-sub{
-  font-size: clamp(1rem , 2vw , 2.0625rem);
+  font-size: clamp(.875rem , 2vw , 2.0625rem);
 }
 @media(min-width:768px){
   .cover-bottom{
@@ -333,7 +331,7 @@ html{
     left: 21.5%;
   }
 }
-@media(max-width:1660px){
+@media(min-width:768px) and (max-width:1660px){
   .cover-bottom{
     transform: scale(0.8) translateY(3.75rem);
   }
@@ -349,33 +347,34 @@ html{
 .cover-three-button{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   row-gap: .75rem;
-  max-width: 15.625rem;
-  margin: 5.875rem auto 1.5rem;
+  margin: 1.5625rem 0 5.8125rem  1.75rem;
 }
 @media(min-width:768px){
   .cover-three-button{
     position: absolute;
-    top: 110%;
-    left: 21.5%;
+    left: 20%;
     display: flex;
     flex-direction: row;
-    column-gap: 2.5rem;
-    max-width: 68.75rem;
-    margin: 0 auto;
+    column-gap: clamp(.1rem , 2.5vw , 2.625rem);
+    transform:translateY(-3.8125rem) ;
   }
 }
 .cover-button{
-  font-size:  1rem;
+  font-size: clamp(1rem , 2vw, 1.5rem);
   border-radius: 1.5625rem;
   padding: .75rem;
+  max-width: 15.625rem;
+  width: 100%;
+  margin: 0 auto ;
 }
 @media(min-width:768px){
   .cover-button{
-    font-size:  1.5rem;
     border-radius: 2.375rem;
     padding: 1.1875rem 3.75rem;
+    max-width: 68.75rem;
+    width: auto;
   }
 }
 .button-green-ghost{
@@ -389,7 +388,7 @@ html{
 }
 @media(min-width:768px){
   .button-emerald-green-ghost{
-    padding: 1.1875rem 6.375rem;
+    padding: 1.1875rem 6.1875rem;
   }
 }
 
