@@ -44,7 +44,7 @@ html{
   background: #FFF;
   border-radius: 2.0625rem;
   color: #005BAC;
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 2vw, 1.1875rem);
 }
 
 @media(min-width:768px){
@@ -54,7 +54,6 @@ html{
     border-radius: 2.4375rem;
     padding: 1.0625rem 3rem;
     margin-right: 0.875rem;
-    font-size: 1.1875rem;
   }
 }
 .container{
@@ -220,6 +219,9 @@ html{
     font-size: .875rem;
   }
 }
+.hamburger-nav-list-group a{
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
 @media(min-width:768px){
   .hamburger-menu{
     display: flex;
@@ -235,7 +237,6 @@ html{
 
   }
   .hamburger-nav-list-group a{
-    font-size: 1.25rem;
     font-weight: 500;
     color: #333;
   }
@@ -285,12 +286,11 @@ html{
   align-items: center;
 }
 .cover-top-title{
-  font-size: .6875rem;
+  font-size:clamp(.6875rem, 2vw ,1.25rem ) ;
   font-weight: 400;
 }
 @media(min-width:768px){
   .cover-top-title{
-    font-size: 1.25rem;
     padding-top: .8125rem;
     padding-left: .6875rem;
   }
@@ -324,27 +324,25 @@ html{
   bottom: 14%;
   left: 8%;
 }
+.cover-bottom-sub{
+  font-size: clamp(1rem , 2vw , 2.0625rem);
+}
 @media(min-width:768px){
   .cover-bottom{
     bottom: 22%;
     left: 21.5%;
   }
 }
-@media (min-width:768px){
-  .cover-bottom-sub{
-    font-size: 2.0625rem;
+@media(max-width:1660px){
+  .cover-bottom{
+    transform: scale(0.8) translateY(3.75rem);
   }
 }
-.coer-bottom-sub-titile{
-  font-size: 1.5625rem;
+.coer-bottom-sub-title{
+  font-size: clamp(1.5625rem , 4vw, 3.75rem) ;
   font-weight: 900;
   line-height: 1.4;
   color: #005BAC;
-}
-@media(min-width:768px){
-  .coer-bottom-sub-titile{
-    font-size: 3.75rem;
-  }
 }
 
 /*3つのボタン */
