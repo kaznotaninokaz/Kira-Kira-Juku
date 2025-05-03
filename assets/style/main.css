@@ -632,6 +632,7 @@ html{
     margin: 0 auto;
   }
 }
+ /* タイトル */
 .price .section-title{
     padding-left: 1.25rem;
     padding-bottom: 1.0625rem;
@@ -643,6 +644,8 @@ html{
     padding-left: .4375rem;
   }
 }
+
+/* 価格表タイトル */
 .price-item{
   display: flex;
   align-items: center;
@@ -677,16 +680,16 @@ html{
 .price-item-group-fee{
   font-weight: normal;
 }
+
+/* 価格表内容 基本スタイル */
 .price-item-group-content{
   display: flex;
   border-bottom:.0625rem solid #CCCCCC;
 }
-.price-item-group-content-6th{
+.price-item-group-content:last-child{
   border-bottom:none;
 }
-.price-item-group-title-content-1{
-padding-left: .375rem;
-}
+/* 左列（年間講数） */
 .price-item-group-title-content{
   width: 34%;
   height: 3.9375rem;
@@ -702,6 +705,7 @@ padding-left: .375rem;
     padding: 1.6875rem 0 3.125rem;
   }
 }
+/* 右列（授業料）*/
 .price-item-group-fee-content{
   font-family: poppins;
   font-size: 1.75rem;
@@ -715,22 +719,25 @@ padding-left: .375rem;
     letter-spacing: .1875rem;
   }
 }
+
+ /* 調整 */
 .price-item-group-fee-content span{
   font-size: 1rem;
 }
-.price-item-group-fee-content-5th {
+.price-item-group-content:nth-child(5) .price-item-group-fee-content {
   padding-left: 2.8125rem;
 }
 @media(min-width:768px){
-  .price-item-group-fee-content-5th {
+  .price-item-group-content:nth-child(5) .price-item-group-fee-content {
     padding-left: 9.875rem;
   }
 }
-.price-item-group-fee-content-6th{
+
+.price-item-group-content:nth-child(6) .price-item-group-fee-content{
   padding: .625rem .4375rem .625rem 3.8125rem;
 }
 @media(min-width:768px){
-  .price-item-group-fee-content-6th{
+  .price-item-group-content:nth-child(6) .price-item-group-fee-content{
     padding: 1.1875rem .0625rem .0625rem 10.125rem;
   }
 }
