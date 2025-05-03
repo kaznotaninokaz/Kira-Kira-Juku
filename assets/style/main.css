@@ -38,7 +38,7 @@ html{
   opacity: 0.5;
 }
 /* 白色ボタン */
-.button-white-ghost{
+.white{
   max-width: 21.875rem;
   padding: 1.25rem 5.3125rem;
   background: #FFF;
@@ -48,7 +48,7 @@ html{
 }
 
 @media(min-width:768px){
-  .button-white-ghost{
+  .white{
     color: #fff;
     background: transparent linear-gradient(90deg, #0271E0 0%, #53A2F0 100%) 0% 0% ;
     border-radius: 2.4375rem;
@@ -83,23 +83,23 @@ html{
 }
 
 /* 入学説明会に申込 */
-.briefing{
+.admission-intro{
   display: flex;
   flex-direction: column;
   background-color: #FF55551A;
 }
-.briefing p{
+.admission-intro p{
   font-weight: 400;
   padding: 2.5rem 2.6875rem .625rem;
   text-align: center;
   line-height: 1.6;
 }
 @media(min-width:768px){
-  .briefing p{
+  .admission-intro p{
     padding: 3.5rem 0 1.125rem;
   }
 }
-.button-blue-ghost{
+.blue{
   font-size: 1.25rem;
   padding: 1.25rem 3.3125rem;
   margin: 0 auto 2.5rem;
@@ -107,7 +107,7 @@ html{
   border-radius: 2.1875rem;
 }
 @media(min-width:768px){
-  .button-blue-ghost{
+  .blue{
     font-size: 1.4375rem;
     padding: 1.25rem 3.5625rem 1.25rem 4.25rem;
     border-radius: 2.1875rem;
@@ -377,17 +377,17 @@ html{
     width: auto;
   }
 }
-.button-green-ghost{
+.green{
   background-color: #77CB33;
 }
-.button-orange-ghost{
+.orange{
   background-color: #F6AA00;
 }
-.button-emerald-green-ghost{
+.emerald-green{
   background-color: #3AC8AD;
 }
 @media(min-width:768px){
-  .button-emerald-green-ghost{
+  .emerald-green.special-padding{
     padding: 1.1875rem 6.1875rem;
   }
 }
