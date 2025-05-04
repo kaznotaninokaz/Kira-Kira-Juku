@@ -207,40 +207,36 @@
           <!-- タイトル -->
           <h2 class="section-title">費用</h2>
           <!-- 価格表 -->
-          <table class="price-item">
-            <thead>
-              <tr class="price-item-group">
-                <th class="price-item-group-title">年間講数</th>
-                <th class="price-item-group-fee">年間授業料（税込み）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">5講</td>
-                <td class="price-item-group-fee-content">24,500<span>円</span></td>
-              </tr>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">10講</td>
-                <td class="price-item-group-fee-content">49,000<span>円</span></td>
-              </tr>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">11講</td>
-                <td class="price-item-group-fee-content">53,900<span>円</span></td>
-              </tr>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">12講</td>
-                <td class="price-item-group-fee-content">58,800<span>円</span></td>
-              </tr>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">22講</td>
-                <td class="price-item-group-fee-content">107,800<span>円</span></td>
-              </tr>
-              <tr class="price-item-group-content">
-                <td class="price-item-group-title-content">24講</td>
-                <td class="price-item-group-fee-content">117,600<span>円</span></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="price-table">
+            <div class="price-table-head">
+              <div class="price-col title">年間講数</div>
+              <div class="price-col title-fee">年間授業料（税込み）</div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">5講</div>
+              <div class="price-col fee">24,500<span>円</span></div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">10講</div>
+              <div class="price-col fee">49,000<span>円</span></div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">11講</div>
+              <div class="price-col fee">53,900<span>円</span></div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">12講</div>
+              <div class="price-col fee">58,800<span>円</span></div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">22講</div>
+              <div class="price-col fee">107,800<span>円</span></div>
+            </div>
+            <div class="price-row">
+              <div class="price-col title row">24講</div>
+              <div class="price-col fee">117,600<span>円</span></div>
+            </div>
+          </div>
         </div>
         <!-- 入学説明会に申込-->
         <div class="admission-intro">
@@ -248,8 +244,6 @@
           <a href="#" class="button blue">入学説明会に申し込む</a>
         </div>
       </section>
-
-      <!-- お問い合わせ -->
       <section class="information">
         <nav class="information-item">
           <!-- 1つ目-->

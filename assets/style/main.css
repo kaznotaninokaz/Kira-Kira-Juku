@@ -645,103 +645,132 @@ html{
   }
 }
 
-/* 価格表タイトル */
-.price-item{
+/* 表全体 */
+.price-table{
   display: flex;
-  align-items: center;
   flex-direction: column;
-  font-weight: 400;
-  border: .1875rem solid #CCC;
-  margin-bottom: 3.9375rem;
+  border: .1875rem solid #ccc;
+  margin-bottom: 4.125rem;
+  font-weight: 400
 }
 @media(min-width:768px){
-  .price-item{
-    margin-bottom: 4.375rem;
+  .price-table{
+    margin-bottom: 4.5625rem;
   }
-}
-.price-item thead,
-.price-item tbody{
-  width: 100%;
-}
-.price-item-group{
-  display: flex;
-  justify-content:space-between;
-  background-color: #F5F5F5;
-  padding: 1.25rem 2.375rem 1.25rem 1.5625rem;
-  border-bottom:.0625rem solid #CCCCCC;
-}
-@media(min-width:768px){
-  .price-item-group{
-    padding: 1.625rem 8.625rem 1.5rem 2.375rem;
-    letter-spacing: .1062rem;
-  }
-}
-.price-item-group-title,
-.price-item-group-fee{
-  font-weight: normal;
 }
 
-/* 価格表内容 基本スタイル */
-.price-item-group-content{
+/* 価格表ヘッダー */
+.price-table-head{
   display: flex;
-  border-bottom:.0625rem solid #CCCCCC;
+  background-color: #F5F5F5;
+  border-bottom: .0625rem solid #ccc;
 }
-.price-item-group-content:last-child{
-  border-bottom:none;
+.price-col.title{
+  flex: 0 0 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem .0625rem 1.25rem;
 }
-/* 左列（年間講数） */
-.price-item-group-title-content{
-  width: 34%;
-  height: 3.9375rem;
-  border-right: .0625rem solid #CCC;
-  padding: 1.375rem;
+@media(min-width:768px){
+  .price-col.title{
+    flex: 0 0 24%;
+    font-size: 1.125rem;
+    padding: 1.5625rem .0625rem 1.4375rem .1875rem;
+  }
+}
+.price-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price-col.title-fee{
+  padding-right: .8125rem;
+}
+@media(min-width:768px){
+  .price-col.title-fee{
+    padding-right: .0625rem;
+  }
+}
+
+/* 各行 */
+.price-row{
+  display: flex;
+  border-bottom: .0625rem solid #ccc;
+}
+.price-row:last-child{
+  border-bottom: none;
+}
+
+/* 列 */
+.price-col{
   text-align: center;
 }
 @media(min-width:768px){
-  .price-item-group-title-content{
-    width: 24%;
-    height: 3.9375rem;
+  .price-col{
     font-size: 1.125rem;
-    padding: 1.6875rem 0 3.125rem;
   }
 }
-/* 右列（授業料）*/
-.price-item-group-fee-content{
-  font-family: poppins;
-  font-size: 1.75rem;
+.price-col.title.row{
+  border-right: .0625rem solid #ccc;
+}
+.price-col.fee{
   color: #F23397;
-  padding: .6875rem .0625rem .0625rem 3.0625rem;
-  letter-spacing: .0625rem;
+  font-family: poppins, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  padding:  .625rem .3125rem .6875rem 0;
 }
 @media(min-width:768px){
-  .price-item-group-fee-content{
-    padding: 1.1875rem .0625rem .0625rem 10.1875rem;
-    letter-spacing: .1875rem;
+  .price-col.fee{
+    letter-spacing: .125rem;
+    padding: 1.125rem 0 1.0625rem;
   }
 }
-
- /* 調整 */
-.price-item-group-fee-content span{
+.price-col.fee span{
   font-size: 1rem;
-}
-.price-item-group-content:nth-child(5) .price-item-group-fee-content {
-  padding-left: 2.8125rem;
+  padding-top: .375rem;
 }
 @media(min-width:768px){
-  .price-item-group-content:nth-child(5) .price-item-group-fee-content {
-    padding-left: 9.875rem;
+  .price-col.fee span{
+    padding-top: .4375rem;
   }
 }
 
-.price-item-group-content:nth-child(6) .price-item-group-fee-content{
-  padding: .625rem .4375rem .625rem 3.8125rem;
+/* 調整 */
+.price-row:nth-child(3) .price-col.title,
+.price-row:nth-child(4) .price-col.title,
+.price-row:nth-child(5) .price-col.title,
+.price-row:nth-child(6) .price-col.title,
+.price-row:nth-child(7) .price-col.title{
+  padding: 0;
 }
 @media(min-width:768px){
-  .price-item-group-content:nth-child(6) .price-item-group-fee-content{
-    padding: 1.1875rem .0625rem .0625rem 10.125rem;
-  }
+  .price-row:nth-child(3) .price-col.title,
+  .price-row:nth-child(4) .price-col.title,
+  .price-row:nth-child(5) .price-col.title,
+  .price-row:nth-child(6) .price-col.title,
+  .price-row:nth-child(7) .price-col.title{
+  padding: .25rem 0 0 .125rem;
+}
 }
 
+.price-row:nth-child(6) .price-col.fee{
+  padding: .6875rem .25rem 10px 0;
+}
+.price-row:nth-child(7) .price-col.fee{
+  padding: .6875rem .125rem .5rem 3.875rem;
+}
+/* 調整 PC（1920px）版 */
+@media(min-width:768px){
+  .price-row:nth-child(6) .price-col.fee{
+    padding: 1.0625rem 0 1.125rem;
+  }
+  .price-row:nth-child(7) .price-col.fee{
+    padding: 1.125rem 0 .8125rem;
+  }
+}
 /* information
 ----------------------------------------------------*/
 @media(min-width:768px){
