@@ -817,9 +817,9 @@ padding-left: .375rem;
 .price__item-group-fee-content{
   font-family: poppins;
   font-size: 1.75rem;
+  font-weight: 700;
   color: #F23397;
   padding: .6875rem .0625rem .0625rem 3.0625rem;
-  letter-spacing: .0625rem;
 }
 @media(min-width:768px){
   .price__item-group-fee-content{
