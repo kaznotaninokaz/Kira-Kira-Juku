@@ -622,10 +622,12 @@ html{
   .st>.tab-content>.tab-pane {
     background-color: #F2F9FF;
     padding: .9375rem .9375rem 2.6875rem;
+
   }
 @media(min-width:768px){
   .st>.tab-content>.tab-pane {
-    padding-bottom: .9375rem;
+    padding-bottom: 1.4375rem;
+    border-radius: 0 0 .75rem .75rem;
   }
 }
 @media(min-width:768px){
@@ -705,25 +707,28 @@ html{
 @media(min-width:768px){
   .course__tab-content-item img{
     height: auto;
-    margin-bottom: 1.125rem;
   }
 }
-.bi-arrow-right{
-  font-size: 1rem;
+.course__tab-content-item svg{
   color: #005BAC;
-  padding-right: .5625rem;
+  padding-top: .375rem;
+  padding-right: .125rem;
 }
 @media(min-width:768px){
-  .bi-arrow-right{
-    font-size: 1.0625rem;
+  .course__tab-content-item svg{
+    padding-top: 0;
+    padding-right: 0;
   }
 }
+
 .course__tab-content-item-title{
   margin-bottom: .875rem;
+  display: flex;
 }
 @media(min-width:768px){
   .course__tab-content-item-title{
     font-size: 1.25rem;
+    column-gap: .375rem;
   }
 }
 
