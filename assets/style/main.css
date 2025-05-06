@@ -2,7 +2,7 @@
 /* ベースのスタイル
 ------------------------------------------ */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
@@ -582,7 +582,12 @@ html{
 /* コース・目的
 --------------------------------------------------*/
 .course{
-  padding-top:4rem
+  padding-top:4rem;
+}
+@media(min-width:768px){
+  .course{
+    padding-top:0;
+  }
 }
 .course .section-title{
   padding-bottom: 1rem;
@@ -590,7 +595,7 @@ html{
 }
 @media(min-width:768px){
   .course .section-title{
-    padding: .6875rem 0 1.8125rem;
+    padding: 4.25rem 0 2.3125rem;
   }
   .tab{
     max-width: 72.5rem;
@@ -645,7 +650,7 @@ html{
   line-height: 1;
   color: #33333380;
   background-color: #F0F0F0;
-  border-radius: .75rem .75rem 0rem 0rem;
+  border-radius: .75rem .75rem 0 0;
 }
 @media(min-width:768px){
   .tab.st-theme-basic > .nav .nav-link{
@@ -660,13 +665,44 @@ html{
   color: #333;
   background-color: #F2F9FF ;
 }
+@media(min-width:768px){
+  .course__tab-content-item:nth-child(1){
+    width: 47.5%;
+  }
+  .course__tab-content-item:nth-child(3){
+    width: 47.5%;
+  }
+  #tab-2 .course__tab-content-item:nth-child(1){
+    width: 46.5%;
+  }
+  #tab-2 .course__tab-content-item:nth-child(2){
+    width: 47.5%;
+  }
+  #tab-2 .course__tab-content-item:nth-child(3){
+    width: 47.5%;
+  }
+  #tab-2 .course__tab-content-item:nth-child(4){
+    width: 48.5%;
+  }
+}
+
 .course__tab-content-item a{
   display: block;
+  overflow: hidden;
+  border-radius: .75rem;
 }
 @media(min-width:768px){
-  .course__tab-content-item a:hover{
+  .course__tab-content-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+  }
+  .course__tab-content-item img:hover {
     transform: scale(1.2);
     transition: transform 0.2s ease;
+    border-radius: .75rem;
+
   }
 }
 :root {
@@ -695,7 +731,7 @@ html{
   }
   .course__tab-content-item:nth-child(3),
   .course__tab-content-item:nth-child(4){
-    padding-top: 1.5rem;
+    padding-top: 0;
   }
 }
 .course__tab-content-item img{
@@ -729,6 +765,7 @@ html{
   .course__tab-content-item-title{
     font-size: 1.25rem;
     column-gap: .375rem;
+    margin-bottom: 1.75rem;
   }
 }
 
@@ -860,6 +897,7 @@ padding-left: .375rem;
   position: relative;
   width: 100%;
   max-width: 60rem;
+  overflow: hidden;
 }
 .information__item-group a{
   display: block;
