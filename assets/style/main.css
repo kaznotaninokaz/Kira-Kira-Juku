@@ -13,9 +13,10 @@ a {
   text-decoration: none;
 }
 img {
+  width: 100%;
   max-width: 100%;
   height: auto;
-  vertical-align: middle;;
+  object-fit: cover;
 }
 ul {
   list-style: none;
@@ -24,6 +25,11 @@ ul {
 /* スムーススクロール */
 html{
   scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0; /* 必要に応じて */
 }
 
 /* 部品
@@ -278,6 +284,7 @@ html{
 }
 .cover__container-img{
   max-width: 104%;
+  width: 104%;
 }
 /* 合格実績 No,1 */
 .cover__top{
@@ -398,24 +405,24 @@ html{
     font-size: 1.5rem;
   }
 }
-.coer__bottom-sub-titile{
+.coer__bottom-sub-title{
   font-size: 1.5625rem;
   font-weight: 900;
   line-height: 1.4;
   color: #005BAC;
 }
 @media(min-width:768px){
-  .coer__bottom-sub-titile{
+  .coer__bottom-sub-title{
     font-size: 3.75rem;
   }
 }
 @media(min-width:768px) and (max-width:1259px){
-  .coer__bottom-sub-titile{
+  .coer__bottom-sub-title{
     font-size: 2.125rem;
   }
 }
 @media(min-width:1260px) and (max-width:1660px){
-  .coer__bottom-sub-titile{
+  .coer__bottom-sub-title{
     font-size: 2.8125rem;
   }
 }
@@ -598,7 +605,7 @@ html{
     padding: 4.25rem 0 2.3125rem;
   }
   .tab{
-    max-width: 72.5rem;
+    max-width: 100%;
     margin: auto;
   }
 }
@@ -719,6 +726,10 @@ html{
   }
 }
 .course__tab-content-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 1rem;
 }
 @media(min-width:768px){
@@ -735,7 +746,10 @@ html{
   }
 }
 .course__tab-content-item img{
-  height: 13.625rem;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: .75rem;
   margin-bottom: .8125rem;
@@ -758,6 +772,8 @@ html{
 }
 
 .course__tab-content-item-title{
+  text-align: left;
+  width: 100%;
   margin-bottom: .875rem;
   display: flex;
 }
