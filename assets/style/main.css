@@ -286,6 +286,11 @@ html, body {
   max-width: 104%;
   width: 104%;
 }
+@media(min-width:768px){
+  .cover__container-img{
+    width: 100%;
+  }
+}
 /* 合格実績 No,1 */
 .cover__top{
   position: absolute;
@@ -605,8 +610,9 @@ html, body {
     padding: 4.25rem 0 2.3125rem;
   }
   .tab{
-    max-width: 100%;
     margin: auto;
+    max-width: 72.5rem;
+
   }
 }
 /* タブ */
@@ -638,7 +644,7 @@ html, body {
   }
 @media(min-width:768px){
   .st>.tab-content>.tab-pane {
-    padding-bottom: 1.4375rem;
+    padding-bottom: 1rem;
     border-radius: 0 0 .75rem .75rem;
   }
 }
@@ -665,6 +671,9 @@ html, body {
     padding-bottom: 1.4375rem;
     font-size: 1.5625rem;
     line-height: 1;
+  }
+  #tab-1 {
+    padding-bottom: .8125rem;
   }
 }
 /* アクティブ状態 */
@@ -792,7 +801,7 @@ html, body {
 }
 @media(min-width:768px){
   .price .container{
-    padding-top: 4.25rem;
+    padding-top: 3.9375rem;
     max-width: 635px;
     margin: 0 auto;
   }
@@ -804,7 +813,7 @@ html, body {
 }
 @media(min-width:768px){
   .price .section-title{
-    padding-bottom: 1.875rem;
+    padding-bottom: 2.5625rem;
     padding-left: .4375rem;
   }
 }
@@ -821,6 +830,7 @@ html, body {
     margin-bottom: 4.375rem;
   }
 }
+
 .price__item thead,
 .price__item tbody{
   width: 100%;
@@ -828,15 +838,31 @@ html, body {
 .price__item-group{
   display: flex;
   justify-content:space-between;
+  align-items: center;
   background-color: #F5F5F5;
-  padding: 1.25rem 2.375rem 1.25rem 1.5625rem;
+  column-gap: .625rem;
+  padding: 1.1875rem 0 1.1875rem 1.5625rem;
   border-bottom:.0625rem solid #CCCCCC;
 }
 @media(min-width:768px){
   .price__item-group{
-    padding: 1.625rem 8.625rem 1.5rem 2.375rem;
+    padding-top: 1.375rem;
+    padding-bottom: 1.5rem;
     letter-spacing: .1062rem;
   }
+}
+.price__item-group-title{
+  width: 27%;
+}
+@media(min-width:768px){
+  .price__item-group-title{
+    width: 21%;
+  }
+}
+
+.price__item-group-fee{
+  width: 100%;
+  text-align: center;
 }
 .price__item-group-title,
 .price__item-group-fee{
@@ -853,7 +879,7 @@ html, body {
 padding-left: .375rem;
 }
 .price__item-group-title-content{
-  width: 34%;
+  width: 45%;
   height: 3.9375rem;
   border-right: .0625rem solid #CCC;
   padding: 1.375rem;
@@ -861,7 +887,7 @@ padding-left: .375rem;
 }
 @media(min-width:768px){
   .price__item-group-title-content{
-    width: 24%;
+    width: 32%;
     height: 3.9375rem;
     font-size: 1.125rem;
     padding: 1.6875rem 0 3.125rem;
@@ -872,11 +898,13 @@ padding-left: .375rem;
   font-size: 1.75rem;
   font-weight: 700;
   color: #F23397;
-  padding: .6875rem .0625rem .0625rem 3.0625rem;
+  padding: .6875rem .375rem .0625rem 0;
+  text-align: center;
+  width: 100%
 }
 @media(min-width:768px){
   .price__item-group-fee-content{
-    padding: 1.1875rem .0625rem .0625rem 10.1875rem;
+    padding: 1.25rem 0 0 0 ;
     letter-spacing: .1875rem;
   }
 }
@@ -884,19 +912,15 @@ padding-left: .375rem;
   font-size: 1rem;
 }
 .price__item-group-fee-content-5th {
-  padding-left: 2.8125rem;
+  padding-left: .1875rem;
 }
-@media(min-width:768px){
-  .price__item-group-fee-content-5th {
-    padding-left: 9.875rem;
-  }
-}
+
 .price__item-group-fee-content-6th{
-  padding: .625rem .4375rem .625rem 3.8125rem;
+  padding: .75rem 0 0 .8125rem;
 }
 @media(min-width:768px){
   .price__item-group-fee-content-6th{
-    padding: 1.1875rem .0625rem .0625rem 10.125rem;
+    padding: 1.1875rem 0 .0625rem;
   }
 }
 
