@@ -96,9 +96,13 @@ html, body {
 
 /* 入学説明会に申込 */
 .briefing{
-  display: flex;
-  flex-direction: column;
   background-color: #FF55551A;
+  padding-bottom: 2.5rem;
+}
+@media(min-width:768px){
+  .briefing{
+    padding-bottom: 3.5rem;
+  }
 }
 .briefing p{
   font-weight: 400;
@@ -111,19 +115,54 @@ html, body {
     padding: 3.5rem 0 1.125rem;
   }
 }
-.button--blue-ghost{
+.briefing__content{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: .75rem;
+}
+@media(min-width:768px){
+  .briefing__content{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+.button--ghost{
   font-size: 1.25rem;
   padding: 1.25rem 3.3125rem;
-  margin: 0 auto 2.5rem;
-  background: transparent linear-gradient(90deg, #0271E0 0%, #53A2F0 100%) 0% 0%;
+  margin: 0 auto;
   border-radius: 2.1875rem;
 }
 @media(min-width:768px){
-  .button--blue-ghost{
+  .button--ghost{
     font-size: 1.4375rem;
     padding: 1.25rem 3.5625rem 1.25rem 4.25rem;
     border-radius: 2.1875rem;
-    margin-bottom: 3.6875rem;
+  }
+}
+/* 青色 */
+.blue{
+  grid-row: 1 / 2;
+  background: transparent linear-gradient(90deg, #0271E0 0%, #53A2F0 100%) 0% 0%;
+}
+@media(min-width:768px){
+  .blue{
+    grid-column: 1 / 3;
+    padding: 1.25rem 3.9375rem;
+  }
+}
+/* オレンジ */
+.orange{
+  grid-row: 2 / 3;
+  background-color: #F6AA00;
+  padding: 1.25rem 3.9375rem;
+}
+@media(min-width:768px){
+  .orange{
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    padding: 1.25rem 4.6875rem;
   }
 }
 
